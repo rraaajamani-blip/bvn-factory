@@ -13,12 +13,12 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Result, createStorageKey, StorageKey } from '@types/common.types';
+import { Result, createStorageKey, StorageKey } from '@bvn-types/common.types';
 import { getLogger } from '@utils/logger';
 
 const logger = getLogger('StorageService');
 
-interface StorageConfig {
+export interface StorageConfig {
   maxRetries: number;
   retryDelayMs: number;
   enableBackup: boolean;

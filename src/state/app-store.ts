@@ -4,8 +4,8 @@
  */
 
 import { create } from 'zustand';
-import { AppStore, AppContextState } from '@types/app.types';
-import { AppInitState, AppError, ErrorType, createISOTimestamp } from '@types/common.types';
+import { AppStore, AppContextState } from '@bvn-types/app.types';
+import { AppInitState, AppError, ErrorType, createISOTimestamp } from '@bvn-types/common.types';
 
 const initialState: AppContextState = {
   initState: AppInitState.INITIALIZING,

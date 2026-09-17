@@ -3,7 +3,7 @@
  * Provides structured logging with multiple levels.
  */
 
-import { LogLevel, LogEntry, createISOTimestamp, JSONValue } from '@types/common.types';
+import { LogLevel, LogEntry, createISOTimestamp, JSONValue } from '@bvn-types/common.types';
 
 interface LoggerConfig {
   minLevel: LogLevel;
@@ -21,7 +21,7 @@ const LOG_LEVEL_ORDER = {
 };
 
 class Logger {
-  private config: LoggerConfig;
+  public readonly config: LoggerConfig;
   private logs: LogEntry[] = [];
   private module: string;
 

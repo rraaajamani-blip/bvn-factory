@@ -17,7 +17,7 @@
  * - All required operations
  */
 
-import { Result } from '@types/common.types';
+import { Result } from '@bvn-types/common.types';
 import { getLogger } from '@utils/logger';
 
 const logger = getLogger('InfinityRootEngine');

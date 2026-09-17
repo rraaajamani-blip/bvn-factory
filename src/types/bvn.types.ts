@@ -23,7 +23,6 @@
  * type stubs with exact definitions matching the specification.
  */
 
-import { JSONValue } from './common.types';
 
 /**
  * BLOCKED: BVN mathematical engine is awaiting specification.

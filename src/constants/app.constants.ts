@@ -2,7 +2,7 @@
  * Application constants.
  */
 
-import { StorageKey, createStorageKey } from '@types/common.types';
+import { createStorageKey } from '@bvn-types/common.types';
 
 /**
  * Storage keys for persistent data.

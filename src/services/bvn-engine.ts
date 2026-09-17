@@ -21,8 +21,8 @@
  * - Edge case handling
  */
 
-import { Result } from '@types/common.types';
-import { Root, Factor, RootState, BVNCalculationResult } from '@types/bvn.types';
+import { Result } from '@bvn-types/common.types';
+import { Root, Factor, RootState, BVNCalculationResult } from '@bvn-types/bvn.types';
 import { getLogger } from '@utils/logger';
 
 const logger = getLogger('BVNEngine');
@@ -57,7 +57,7 @@ export class BVNEngine {
    * - Creation algorithm
    * - Validation rules
    */
-  async createRoot(input: unknown): Promise<Result<Root>> {
+  async createRoot(_input: unknown): Promise<Result<Root>> {
     return {
       success: false,
       error: '[BLOCKED] BVN Engine awaiting authoritative specification',
@@ -72,7 +72,7 @@ export class BVNEngine {
    * - State constraints
    * - Transformation constraints
    */
-  async validateRoot(root: Root): Promise<Result<void>> {
+  async validateRoot(_root: Root): Promise<Result<void>> {
     return {
       success: false,
       error: '[BLOCKED] BVN Engine awaiting authoritative specification',
@@ -87,7 +87,7 @@ export class BVNEngine {
    * - Bidirectionality
    * - State preservation/alteration
    */
-  async transformAB(root: Root): Promise<Result<Root>> {
+  async transformAB(_root: Root): Promise<Result<Root>> {
     return {
       success: false,
       error: '[BLOCKED] BVN Engine awaiting authoritative specification',
@@ -102,7 +102,7 @@ export class BVNEngine {
    * - Valid state combinations
    * - Invariant preservation
    */
-  async transformState(root: Root, targetState: RootState): Promise<Result<Root>> {
+  async transformState(_root: Root, _targetState: RootState): Promise<Result<Root>> {
     return {
       success: false,
       error: '[BLOCKED] BVN Engine awaiting authoritative specification',
@@ -117,7 +117,7 @@ export class BVNEngine {
    * - Numerical constraints
    * - Reversibility
    */
-  async transformReciprocal(root: Root): Promise<Result<Root>> {
+  async transformReciprocal(_root: Root): Promise<Result<Root>> {
     return {
       success: false,
       error: '[BLOCKED] BVN Engine awaiting authoritative specification',
@@ -132,7 +132,7 @@ export class BVNEngine {
    * - Pairing definition
    * - Double-inverse property
    */
-  async calculateInverse(root: Root): Promise<Result<Root>> {
+  async calculateInverse(_root: Root): Promise<Result<Root>> {
     return {
       success: false,
       error: '[BLOCKED] BVN Engine awaiting authoritative specification',
@@ -147,7 +147,7 @@ export class BVNEngine {
    * - Sign interaction rules
    * - Result representation
    */
-  async multiplyFactors(a: Factor, b: Factor): Promise<Result<Factor>> {
+  async multiplyFactors(_a: Factor, _b: Factor): Promise<Result<Factor>> {
     return {
       success: false,
       error: '[BLOCKED] BVN Engine awaiting authoritative specification',
@@ -162,7 +162,7 @@ export class BVNEngine {
    * - Division by zero handling
    * - Result representation
    */
-  async divideFactors(a: Factor, b: Factor): Promise<Result<Factor>> {
+  async divideFactors(_a: Factor, _b: Factor): Promise<Result<Factor>> {
     return {
       success: false,
       error: '[BLOCKED] BVN Engine awaiting authoritative specification',
@@ -177,7 +177,7 @@ export class BVNEngine {
    * - Cancellation algorithm
    * - Result representation
    */
-  async cancel(root: Root): Promise<Result<Root>> {
+  async cancel(_root: Root): Promise<Result<Root>> {
     return {
       success: false,
       error: '[BLOCKED] BVN Engine awaiting authoritative specification',
@@ -192,7 +192,7 @@ export class BVNEngine {
    * - Normalization algorithm
    * - Uniqueness guarantee
    */
-  async normalize(root: Root): Promise<Result<Root>> {
+  async normalize(_root: Root): Promise<Result<Root>> {
     return {
       success: false,
       error: '[BLOCKED] BVN Engine awaiting authoritative specification',
@@ -208,7 +208,7 @@ export class BVNEngine {
    * - State propagation
    * - Precision handling
    */
-  async evaluate(expression: string): Promise<Result<BVNCalculationResult>> {
+  async evaluate(_expression: string): Promise<Result<BVNCalculationResult>> {
     return {
       success: false,
       error: '[BLOCKED] BVN Engine awaiting authoritative specification',
@@ -223,7 +223,7 @@ export class BVNEngine {
    * - Verification algorithms
    * - Recovery procedures
    */
-  async checkInvariants(root: Root): Promise<Result<void>> {
+  async checkInvariants(_root: Root): Promise<Result<void>> {
     return {
       success: false,
       error: '[BLOCKED] BVN Engine awaiting authoritative specification',

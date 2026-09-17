@@ -3,7 +3,7 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { StorageKey, JSONValue, Result } from '@types/common.types';
+import { StorageKey, JSONValue, Result } from '@bvn-types/common.types';
 import { getLogger } from './logger';
 
 const logger = getLogger('StorageUtils');
@@ -84,7 +84,7 @@ export async function clearStorage(): Promise<Result<void>> {
 export async function getStorageKeys(): Promise<Result<string[]>> {
   try {
     const keys = await AsyncStorage.getAllKeys();
-    return { success: true, data: keys };
+    return { success: true, data: [...keys] };
   } catch (error) {
     const err = error instanceof Error ? error : new Error(String(error));
     logger.error('Failed to get storage keys', err);
