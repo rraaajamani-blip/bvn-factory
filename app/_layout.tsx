@@ -209,6 +209,7 @@ export default function RootLayout() {
       }}
     >
       <Stack.Screen
+      <Stack.Screen name="game" options={{ title: "Physics Lab" }} />
         name="index"
         options={{
           title: APP_CONFIG.APP_NAME,

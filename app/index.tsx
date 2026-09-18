@@ -14,6 +14,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { useAppStore } from '@state/app-store';
+import { useRouter } from 'expo-router';
 import { AppInitState, LogLevel } from '@types/common.types';
 import { getLogger } from '@utils/logger';
 import { getStorageService } from '@services/storage.service';
@@ -114,6 +115,7 @@ const styles = StyleSheet.create({
 });
 
 export default function HomeScreen() {
+  const router = useRouter();
   const appStore = useAppStore();
   const [storageInfo, setStorageInfo] = React.useState<{
     used: number;
@@ -142,6 +144,7 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollContent}>
         <Text style={styles.header}>{APP_CONFIG.APP_NAME}</Text>
+        <Pressable onPress={() => router.push("/game")} style={{ marginTop: 10, backgroundColor: "#18362f", padding: 12, borderRadius: 10 }}><Text style={{ color: "#a7f3d0", fontWeight: "800", textAlign: "center" }}>🎮 OPEN PHYSICS LAB</Text></Pressable>
 
         {/* Application Status Section */}
         <View style={styles.section}>
